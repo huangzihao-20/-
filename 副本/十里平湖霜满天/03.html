@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;list-style: none;text-decoration: none;font-family: "楷体";}
+			.bg{position:fixed;top: 0;left: 0;width:100%;height:100%;z-index:-10;background-repeat: no-repeat;background-size: cover;-webkit-background-size: cover;-o-background-size: cover;background-position: center 0;}
+		    .one{background: url(01img/b2.jpg); width: 800px;height: 100%;margin-left: 100px;margin-top: 180px;}
+		    .two{background: url(01img/b2.jpg); width: 800px;height: 100%;margin-left: 100px;margin-top: 20px;}
+		    .one p,h2{text-indent: 2em;}
+		    .dh{width: 625px; height: 40px;margin: 0 auto;}
+			.dh li{float:left;text-align: center;line-height: 40px;width: 100px;height: 40px;border: 1px solid black;margin-right: 2px;background-color: gray;}
+			.dh li a{font-family: "楷体";color: black;text-decoration: none;font-size: 14px;}
+			.dh ul .d1 li,.dh ul .d2 li,.dh ul .d3 li,.dh ul .d4 li,.dh ul .d5 li,.dh ul .d6 li{display: none;}
+			.dh ul .d3:hover ul li,.dh ul .d4:hover ul li,.dh ul .d5:hover ul li,.dh ul .d6:hover ul li{display: block;background-color: white;position: relative;left: -1px;}
+			.dh ul .d3:hover ul li a,.dh ul .d4:hover ul li a,.dh ul .d5:hover ul li a,.dh ul .d6:hover ul li a{color:black;}
+			.dh ul .d1:hover,.dh ul .d2:hover,.dh ul .d3:hover,.dh ul .d4:hover,.dh ul .d5:hover,.dh ul .d6:hover{background-color: white;color: black;}
+        body{
+            background: #000 url(../1c950a7b02087bf4ecfb5448f5d3572c11dfcf78.jpg) no-repeat center top;
+        }
+        .wrap{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 200px auto;
+            perspective: 2000px;
+        }
+        .wrap .bigger,.wrap .small{
+            transform-style: preserve-3d;
+            transform: rotateY(60deg);
+            transform-origin: top;
+            transition: all 2s;
+        }
+        .small{
+             animation: move 5s linear infinite;
+        }
+        .bigger{
+            animation: move 5s linear infinite;
+        }
+        .small div{
+            position: absolute;
+            top: 80px;
+            left: 80px;
+            width: 150px;
+            height: 150px;
+            transition: all 2s;
+            opacity: 0.7;
+        }
+        .bigger li{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 298px;
+            height: 298px;
+            border: 1px solid #fff;
+            transition: all 2s;
+        }
+        .small div:nth-child(1){
+            background: url(img/1f178a82b9014a903ef9461cae773912b21bee48.jpg);
+            transform: translateZ(75px);
+        }
+        .small div:nth-child(2){
+            background: url(img/38dbb6fd5266d016a92b9d89902bd40735fa3564.jpg);
+            transform: translateZ(-75px);
+        }
+        .small div:nth-child(3){
+            background: url(img/cefc1e178a82b9018d0bc392748da9773812efe9.jpg));
+            transform: rotateY(90deg) translateZ(75px);
+        }
+        .small div:nth-child(4){
+            background: url(img/ac6eddc451da81cba425836c5566d0160824314b.jpg);
+            transform: rotateY(-90deg) translateZ(75px);
+        }
+        .small div:nth-child(5){
+            background: url();
+            transform: rotateX(90deg) translateZ(75px);
+        }
+        .small div:nth-child(6){
+            background: url('img/6.jpg');
+            transform: rotateX(-90deg) translateZ(75px);
+        }
+        .bigger li:nth-child(2){
+            background: hsla(0,50%,50%,.4);
+            transform: translateZ(150px);
+        }
+        .bigger li:nth-child(3){
+            background: hsla(60,50%,50%,.4);
+            transform: translateZ(-150px);
+        }
+        .bigger li:nth-child(4){
+            background: hsla(120,50%,50%,.4);
+            transform: rotateY(90deg) translateZ(150px);
+        }
+        .bigger li:nth-child(5){
+            background: hsla(180,50%,50%,.4);
+            transform: rotateY(-90deg) translateZ(150px);
+        }
+        .bigger li:nth-child(6){
+            background: hsla(240,50%,50%,.4);
+            transform: rotateX(90deg) translateZ(150px);
+        }
+        .bigger li:nth-child(7){
+            background: hsla(320,50%,50%,.4);
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+        
+        .wrap:hover .bigger{
+             transform: rotateY(360deg);
+        }
+
+        .wrap:hover .bigger li:nth-child(2){
+           
+            transform: translateZ(300px);
+        }
+        .wrap:hover .bigger li:nth-child(3){
+           
+            transform: translateZ(-300px);
+        }
+        .wrap:hover .bigger li:nth-child(4){
+           
+            transform: rotateY(90deg) translateZ(300px);
+        }
+        .wrap:hover .bigger li:nth-child(5){
+           
+            transform: rotateY(-90deg) translateZ(300px);
+        }
+        .wrap:hover .bigger li:nth-child(6){
+            
+            transform: rotateX(90deg) translateZ(300px);
+        }
+        .wrap:hover .bigger li:nth-child(7){
+           
+            transform: rotateX(-90deg) translateZ(300px);
+        }
+        @keyframes move{
+            0%{ transform: rotateY(0deg); }
+            50%{ transform: rotateY(180deg); }
+            100%{ transform: rotateY(360deg); }
+        }
+		</style>
+	</head>
+	<body>
+		<div class="BOX">
+			<div class="bg" style="background-image: url(01img/bg2.jpg);"></div>
+						<div class="dh">
+				<ul>
+					<li class="d1"><a href="张国荣.html">首页</a></li>
+					<li class="d2"><a href="01.html">人物介绍</a></li>
+					<li class="d3"><a href="01.html">一生经历</a>
+						<ul>
+							<li><a href="01.html">港剧时代</a></li>
+							<li><a href="01.html">电影时代</a></li>
+							<li><a href="01.html">音乐时代</a></li>
+						</ul>
+					</li>
+					<li class="d4"><a href="02.html">人物评价</a>
+						<ul>
+							<li><a href="02.html" >演艺方面</a></li>
+							<li><a href="02.html" >态度方面</a></li>
+							<li><a href="02.html" >提携后辈</a></li>
+							<li><a href="02.html" >人品评价</a></li>
+						</ul>
+					</li>
+					<li class="d5"><a href="#d2" >获奖记录</a>
+						<ul>
+							<li><a href="#d2-1" >音乐奖项</a></li>
+							<li><a href="#d2-2" >影视奖项</a></li>
+							<li><a href="#d2-3" >综合奖项</a></li>
+						</ul>
+					</li>
+					<li class="d6"><a href="#d1" >社会活动</a>
+						<ul>
+						    <li><a href="03.html" >香港公益基金会</a></li>
+							<li><a href="03.html" >步行慈善筹款会</a></li>
+							<li><a href="03.html" >香港大学演讲会</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="one">
+				<h1 id="d1">社会活动</h1>
+				<p>1978年2月19日，香港公益基金举办筹款卖物会，张国荣客串义卖主持人。1980年5月18日，参加新加坡国家剧场义演大会。1980年12月7日，参加由香港公益基金举行的“港岛区百万行”步行筹款活动。1981年3月，参加新加坡影视歌巨星慈善晚会。1982年8月，参演“欢乐满年华”慈善款晚会。1983年3月1日，应邀参加在香港湾仔伊利莎伯体育馆举办的香港快活谷狮子会慈善演唱会。1983年6月，参加在新加坡国家剧场举办的慈善筹款“星光灿烂晚会”义演活动。1983年12月9日，参加TVB《欢乐满东华》慈善筹款晚会。</p>
+			    <br />
+			    <p>1984年12月2日，参加“九龙区公益金百万行”步行慈善筹款活动。1985年10月，参加“白金巨星耀保良”慈善晚会。1986年3月，出席“博爱欢乐传万家”慈善筹款晚会。1986年6月7日，张国荣赴台湾出演电视剧《福禄寿喜》，他捐出演出的报酬给当地孤儿院。1987年3月，出席“博爱欢乐传万家”慈善筹款晚会。1987年10月18日参加“白金巨星耀保良”慈善晚会。1987年8月15日，参加慈善Top Pop马拉松音乐会，共筹得160万善款给东华三院。</p>
+			    <br />
+			    <img src="01img/e1.jpg" style="width: 150px;height: 200px;float: right;" />
+			    <p>1988年，19岁的声仔因末期骨癌接受善终服务，医院护士得悉他的愿望是见到张国荣，为了助他圆梦，护士联络上张国荣。张国荣答应探望声仔，唯一条件就是要低调，绝不能让传媒知道。此后张国荣每天打电话陪患者聊天，直到声仔去世 。1988年1月31日，应邀参加“名人珍藏”慈善义卖活动。1988年2月28日，“踏上公民路八八献礼”公益节目在香港举办，张国荣创作了活动主题曲《共创真善美》。1988年8月，参加香港商台举办的八小时慈善义演演出。1988年12月9日，参加《欢乐满东华'88》慈善筹款晚会，并与许冠杰演唱歌曲《何必再迟疑》。</p>
+			    <br />
+			    <p>1989年，张国荣发行了致敬大碟《Salute》，他将唱片所得收益全数捐出，用于资助演艺界后辈。1991年参加华东赈灾卡拉OK筹款活动。1991年，张国荣专程从温哥华回到香港，参加为华东赈灾拍摄的电影《豪门夜宴》的义演。1993年1月，出席《花田喜事》慈善首映。1996年5月2日，出席电影《风月》的“亚视仁济慈善首映夜”，为香港仁济医院筹款。1996年7月10日，出席电影《新上海滩》在香港铜锣湾皇室戏院举行慈善首映。</p>
+			    <br />
+			    <p>1997年演唱会期间，张国荣捐款100万港币给癌症基金。其后在红馆门外设置募捐摊位号召歌迷捐款，一共募捐到80余万善款，张国荣与朋友再添上10余万，又凑足了100万捐予癌症基金，成为第一位在个人演唱会上进行慈善募捐筹款的艺人 。1998年5月，张国荣捐出10万给儿童癌病基金；1998年9月12日生日时，张国荣将收到的一张15万支票转赠给儿童癌病基金。</p>
+			    <br />
+			    <p>1999年，张国荣到新加坡为当地老人院筹款，现场演唱了三首电影主题曲以及插曲，筹得善款共计60万坡币。1999年无线为台湾地震而举行《送暖到台湾》筹款晚会，张国荣即席捐出25万港币给台湾灾民，再加上歌迷捐款，筹得善款共计50万港元。1999年3月28日，张国荣在香港九龙湾国际展贸中心筵开25席，与280位日本自费前来观看电影《星月童话》放映会的Fans聚会；活动中张国荣捐出三套歌衫拍卖，所得费用全部捐给癌症病患者。1999年12月11日，参加《欢乐满东华'99》慈善筹款晚会，他捐出油画进行慈善拍卖。</p>
+			    <br />
+			    <img src="01img/e2.jpg" style="width: 150px;height: 200px;float: right;" />
+			    <p>2000年太阳娱乐开设明星二手店，由捐出二手精品的明星开出底价拍卖， 所得之款项全数拨捐“太阳爱心基金”，张国荣率先捐出三件珍藏作慈善大拍卖；同年香港电台太阳计划和香港反吸烟与健康委员会合作拍摄公益电影《烟飞烟灭》，本来只想找张国荣做主角，但张国荣主动提出不收分文，兼任导演和编剧。2000年5月担任健康快车光明大使。2000年8月，受香港吸烟与健康委员会邀请，担任“全球华人不吸烟大使”。</p>
+			    <br />
+			    <p>2002年2月22日，张国荣在香港中文大学发表题为《如何演绎小说中的人物——以李碧华作品为例》的演讲。5月，张国荣和莫文蔚出席护苗先锋成立典礼，并获委为护苗先锋大使 。张国荣不但抱病出席支持及接受委任，还教现场围观的市民与Fans填写定期捐款表。2002年6月13日，护苗基金举办《我要高飞》电影筹款晚会，本来只是邀请张国荣出席，他得知是为护苗筹款，即自掏腰包买下一批门票。2003年，护苗基金大型慈善之夜在香港举行，张国荣率先响应捐出10万元。2003年3月8日，百事音乐家族慈善演唱会在香港红馆举行；张国荣作为特邀嘉宾参与了演出前的启动仪式，这是他最后一次出席公开活动。2003年4月1日，张国荣因抑郁症病情失控从香港东方文华酒店24楼坠下身亡，终年46岁。</p>
+			    <br />
+			    </div>
+			    <div class="two">
+			    <h1 id="d2">获奖记录</h1>
+			    <table border="1" style="width: 800px;">
+			    <caption><h2 class="zt" id="d2-1">音乐奖项</h2></caption>
+			    <tr><td colspan="2">获奖年份</td></tr>
+			    <tr><td>2017&nbsp;&nbsp;</td><td>·2017华语金曲奖年度最佳MV冰山大火    （获奖） </td></tr>
+			    <tr><td>2017&nbsp;&nbsp;</td><td>·2016年IFPI颁奖礼十大销量广东唱片    哥哥的歌    （获奖）  </td></tr>
+			    <tr><td>2017&nbsp;&nbsp;</td><td>·2016年IFPI颁奖礼全年最高销量广东唱片    哥哥的歌    （获奖） </td><tr>
+			    <tr><td>2017&nbsp;&nbsp;</td><td>·2016年IFPI颁奖礼十大销量本地歌手    （获奖）  </td></tr>
+			    <tr><td>2013&nbsp;&nbsp;</td><td>·Hong Kong Singer Channel香港40年十大金曲第一位    《Monica》    （获奖）   </td><tr>
+			    <tr><td>2010&nbsp;&nbsp;</td><td>·美国CNN过去五十年闻名全球的五大指标音乐人评选第三名    （获奖）    </td></tr>	
+			    <tr><td>2010&nbsp;&nbsp;</td><td>·2009年IFPI颁奖礼全年最高销量广东唱片最红    （获奖）    </td></tr>	
+			    <tr><td>2010&nbsp;&nbsp;</td><td>·华语金曲奖30年经典评选“我最喜爱的歌手”，“我最喜爱的唱片”，“我最喜爱的歌曲”    （获奖）   </td></tr>	
+			    <tr><td>2010&nbsp;&nbsp;</td><td>·入选美国CNN“过去五十年里全球最知名的20位音乐家”    （获奖） </td></tr>	
+			    <tr><td>2010&nbsp;&nbsp;</td><td>·2009年IFPI颁奖礼十大销量广东唱片    （获奖）    </td></tr>	
+			    <tr><td>2010&nbsp;&nbsp;</td><td>·华语金曲奖华语乐坛30年30人    （获奖）  </td></tr>	
+			    </table>
+			    <br />
+			    <br />
+			    <table border="1" style="width: 800px;">
+			    <caption><h2 class="zt" id="d2-2">影视奖项</h2></caption>
+			    <tr><td colspan="2">获奖年份</td></tr>
+			    <tr><td>2014&nbsp;&nbsp;</td><td>·入选日本《电影旬报》“影史百大外国男演员”    （获奖）   </td></tr>
+			    <tr><td>2010&nbsp;&nbsp;</td><td>·美国CNN评选“香港影坛19位最俊美的男星”第一名    （获奖）   </td></tr>
+			    <tr><td>2010&nbsp;&nbsp;</td><td>·美国CNN亚洲最伟大25位演员之一    （获奖）    </td></tr>
+			    <tr><td>2006&nbsp;&nbsp;</td><td>·香港新浪网举办“金像奖银禧选”，当选银禧影帝    （获奖）   </td></tr>
+			    <tr><td>2006&nbsp;&nbsp;</td><td>·日本国家电视台NHK举办在“日本最受欢迎的演员”评选，当选“国际十佳演员”    （获奖）   </td></tr>
+			    <tr><td>2005&nbsp;&nbsp;</td><td>·张国荣8部电影作品入选金像奖评选的百年百部最佳华语片    （获奖）   </td></tr>
+			    <tr><td>2005&nbsp;&nbsp;</td><td>·第五届    华语电影传媒大奖百大演员奖    （获奖）  </td></tr>
+			    <tr><td>2005&nbsp;&nbsp;</td><td>·香港电影金像奖协会等机构合办“中国电影一百年”选举，当选“中国电影一百年最喜爱的男演员”    （获奖）    </td></tr>
+			    <tr><td>2005&nbsp;&nbsp;</td><td>·中国电影百年百位优秀演员”之一    （获奖）</td></tr>
+			    <tr><td>2005&nbsp;&nbsp;</td><td>·《时代周刊》评出的全球史上百部最佳电影    《霸王别姬》    （获奖）    </td></tr>
+			    <tr><td>2004&nbsp;&nbsp;</td><td>·第二十三届    香港电影金像奖追颁演艺光辉永恒大奖    （获奖）</td></tr>
+			    </table>
+			    <br />
+			    <br />
+			    <table border="1" style="width: 800px;">
+			   <caption><h2 class="zt" id="d2-3">综合奖项</h2></caption>
+			   <tr><td colspan="2">获奖年份</td></tr>
+			    	<tr><td>2010</td><td>·香港电台“爱香港的理由”评选结果第一名“有张国荣”    （获奖）</td></tr>
+			    	<tr><td>2009</td><td>·“韩国最高人气中国明星”第三名    （获奖） </td></tr>
+			    	<tr><td>2007</td><td>·新浪粤港十年网娱盛典“最怀念明星奖”    （获奖）</td></tr>
+			    	<tr><td>2005</td><td>·新加坡《联合早报》亚洲明星人气50强第四位    （获奖）</td></tr>
+			    	<tr><td>2005</td><td>·马来西亚民选“十大杰出青年”    （获奖）</td></tr>
+			    	<tr><td>2004</td><td>·入选日本《日经娱乐》在日本最受欢迎的十大亚洲男艺人    （获奖）</td></tr>
+			    	<tr><td>2004</td><td>·香港市民心目中的五大成功人士    （获奖） </td></tr>
+			    	<tr><td>2003</td><td>·中国二十世纪十大文化偶像之一    （获奖）  </td></tr>
+			    	<tr><td>2001</td><td>·日本Yahoo外国明星人气榜第一位    （获奖）  </td></tr>
+			    	<tr><td>2000</td><td>·香港电台千禧十大演艺红人榜首    （获奖）  </td></tr>
+			    	<tr><td>2000</td><td>·浙江区传媒颁发永恒魅力奖    （获奖）</td></tr>
+			    </table>
+			</div>
+		</div>
+		<div class="wrap">
+
+        <ul class="bigger">
+            <ul  class="small">
+            </ul>
+            <li><a href="02.html"><img src="../01.jpg" width="300" height="300"/></a></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        
+    </div>
+	</body>
+</html>
